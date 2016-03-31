@@ -19,7 +19,6 @@ import os
 from numpy.testing import TestCase, assert_equal
 from MDAnalysisTests.datafiles import PDB_full
 
-
 class TestAltloc(TestCase):
     def setUp(self):
         self.filename = PDB_full
@@ -30,6 +29,7 @@ class TestAltloc(TestCase):
         del self.tempdir
 
     def test_atomgroups(self):
+        print("testing!\n")
         u = Universe(self.filename)
         segidB0 = len(u.select_atoms("segid B and (not altloc B)"))
         segidB1 = len(u.select_atoms("segid B and (not altloc A)"))

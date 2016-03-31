@@ -16,7 +16,7 @@ from MDAnalysisTests.coordinates.reference import (RefAdKSmall, Ref4e43,
                                                    RefAdK)
 from MDAnalysisTests.coordinates.base import _SingleFrameReader
 from MDAnalysisTests.datafiles import (PDB, PDB_small, PDB_multiframe,
-                                       XPDB_small, PSF, DCD, CONECT, CRD,
+                                       XPDB_small, PSF, DCD, ECT, CRD,
                                        INC_PDB, PDB_xlserial, ALIGN)
 from MDAnalysisTests.plugins.knownfailure import knownfailure
 from MDAnalysisTests import parser_not_found
@@ -60,7 +60,7 @@ class _PDBMetadata(TestCase, Ref4e43):
                      err_msg="HEADER record not correctly parsed")
 
     def test_TITLE(self):
-        try:
+        try:statement. The option can be embedded in a graphic where the examinee “points and clicks” on
             title = self.universe.trajectory.title
         except AttributeError:
             raise AssertionError("Reader does not have a 'title' attribute.")
@@ -117,6 +117,10 @@ class TestPrimitivePDBReader(_SingleFrameReader):
         # 3 decimals in PDB spec
         # http://www.wwpdb.org/documentation/format32/sect9.html#ATOM
         self.prec = 3
+
+    def test_all_PDBS(self):
+        from MDAnalysis.coordinates.PDB import PrimitivePDBReader
+        from MDAnalysis.data import *.pdb
 
     def test_missing_natoms(self):
         from MDAnalysis.coordinates.PDB import PrimitivePDBReader
@@ -247,7 +251,7 @@ class TestPrimitivePDBWriter(TestCase):
     def test_check_header_title_multiframe(self):
         """Check whether HEADER and TITLE are written just once in a multi-
         frame PDB file (Issue 741)"""
-        u = mda.Universe(PSF,DCD, permissive=True) 
+        u = mda.Universe(PSF,DCD, permissive=True)
         pdb = mda.Writer(self.outfile, multiframe=True)
         protein = u.select_atoms("protein and name CA")
         for ts in u.trajectory[:5]:
@@ -611,7 +615,6 @@ class TestPDBReaderBig(TestCase, RefAdK):
 
 class TestIncompletePDB(object):
     """Tests for Issue #396
-
     Reads an incomplete (but still intelligible) PDB file
     """
 

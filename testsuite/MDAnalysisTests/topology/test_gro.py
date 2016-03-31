@@ -44,4 +44,3 @@ def test_parse_missing_atomname_IOerror():
     parser = mda.topology.GROParser.GROParser
     with parser(GRO_missing_atomname) as p:
       assert_raises(IOError, p.parse)
-
