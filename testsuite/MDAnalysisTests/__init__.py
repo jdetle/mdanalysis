@@ -97,11 +97,11 @@ parentheses must be included.
 
 .. _NumPy: http://www.numpy.org/
 .. _nose:
-   http://somethingaboutorange.com/mrl/projects/nose/0.11.3/index.html
+   http://nose.readthedocs.org/en/latest/testing.html
 .. _nose commandline options:
-   http://somethingaboutorange.com/mrl/projects/nose/0.11.3/usage.html#extended-usage
+   http://nose.readthedocs.org/en/latest/testing.html
 .. _SciPy testing guidelines:
-   http://projects.scipy.org/numpy/wiki/TestingGuidelines#id11
+   http://nose.readthedocs.org/en/latest/man.html?highlight=command%20line
 .. _Charmm: http://www.charmm.org
 .. _Gromacs: http://www.gromacs.org
 
