@@ -101,7 +101,7 @@ parentheses must be included.
 .. _nose commandline options:
    http://nose.readthedocs.org/en/latest/testing.html
 .. _SciPy testing guidelines:
-   http://nose.readthedocs.org/en/latest/man.html?highlight=command%20line
+   http://nose.readthedocs.org/en/latest/man.html?highlight=command%20line 
 .. _Charmm: http://www.charmm.org
 .. _Gromacs: http://www.gromacs.org
 
