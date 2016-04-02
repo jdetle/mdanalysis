@@ -67,7 +67,7 @@ def get_reader_for(filename, permissive=False, format=None):
     if format is None:
         format = util.guess_format(filename)
     format = format.upper()
-    if permissive and format == 'PDB':
+    if format == 'PDB':
         return _READERS['Permissive_PDB']
     try:
         return _READERS[format]
@@ -113,7 +113,7 @@ def reader(filename, **kwargs):
     .. SeeAlso:: For trajectory formats: :class:`~DCD.DCDReader`,
        :class:`~XTC.XTCReader`, :class:`~TRR.TRRReader`,
        :class:`~XYZ.XYZReader`.  For single frame formats:
-       :class:`~CRD.CRDReader`, :class:`~PDB.PDBReader` and
+       :class:`~CRD.CRDReader`, and
        :class:`~PDB.PrimitivePDBReader`, :class:`~GRO.GROReader`,
     """
     if isinstance(filename, tuple):

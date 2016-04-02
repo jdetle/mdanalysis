@@ -125,7 +125,7 @@ def get_parser_for(filename, permissive=False, format=None):
     if format is None:
         format = util.guess_format(filename)
     format = format.upper()
-    if format == 'PDB' and permissive:
+    if format == 'PDB':
         return _PARSERS['Permissive_PDB']
 
     try:
