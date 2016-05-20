@@ -130,7 +130,9 @@ class TestAlign(TestCase):
         # VMD: 6.9378711
         self._assert_rmsd(fitted, 0, 6.929083044751061)
         self._assert_rmsd(fitted, -1, 0.0)
-        del self.outfile 
+        del self.outfile
+        del fitted
+
     def _assert_rmsd(self, fitted, frame, desired):
         fitted.trajectory[frame]
         rmsd = rms.rmsd(self.reference.atoms.positions,
